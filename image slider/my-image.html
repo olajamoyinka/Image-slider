@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My-Images</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="my-image.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+
+</head>
+
+<body>
+    <!-- slider start -->
+    <div class="slider">
+        <div class="slides">
+            <!-- radio buttons start -->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <input type="radio" name="radio-btn" id="radio5">
+
+
+            <!-- radio buttons end -->
+
+            <!-- slide image start -->
+
+            <div class="slide first">
+                <img src=".\images\image1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src=".\images\image2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src=".\images\image3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src=".\images\image4.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src=".\images\image5.jpg" alt="">
+            </div>
+
+
+            <!-- slide image end -->
+
+            <!-- automatic nav start -->
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+
+            </div>
+
+            <!-- automatic nav end -->
+
+        </div>
+
+        <!-- manual nav start -->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+            <label for="radio5" class="manual-btn"></label>
+
+        </div>
+
+        <!-- manual nav end -->
+
+
+    </div>
+
+
+    <!-- slider end -->
+
+
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function() {
+                document.getElementById("radio" + counter).checked = true;
+                counter++;
+                if (counter > 5) {
+                    counter = 1;
+                }
+
+            },
+            4000);
+    </script>
+
+</body>
+
+</html>
